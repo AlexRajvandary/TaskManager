@@ -14,7 +14,7 @@ namespace TaskManager
 
         static void Main(string[] args)
         {
-            var taskContext = new TaskContext();
+            using var taskContext = new TaskContext();
             taskViewModel = new TaskViewModel(taskContext);
             
             string userInput;
