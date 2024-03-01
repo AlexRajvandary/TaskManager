@@ -12,6 +12,7 @@ namespace TaskManagerLib.ViewModel
 
         private List<Category> categories;
         private List<TaskItem> tasks;
+        private List<TaskItem> searchResult;
         private TaskItem? currentItem;
 
         public TaskViewModel(TaskContext taskContext)
@@ -66,6 +67,19 @@ namespace TaskManagerLib.ViewModel
             }
         }
 
+        public List<TaskItem> SearchResult
+        {
+            get { return searchResult; }
+            private set
+            {
+                if (searchResult != value)
+                {
+                    searchResult = value;
+                    OnPropertyChanged(this, new PropertyChangedEventArgs(nameof(Tasks)));
+                }
+            }
+        }
+
         public TaskItem? CurrentTask
         {
             get { return currentItem; }
@@ -85,6 +99,9 @@ namespace TaskManagerLib.ViewModel
             {
                 taskContext.Tasks.Add(item);
                 taskContext.SaveChanges();
+
+                //Для того, чтобы обновить view
+                UpdateAllTasks();
             }
             catch (Exception ex)
             {
@@ -96,6 +113,9 @@ namespace TaskManagerLib.ViewModel
         {
             taskContext.Tasks.Remove(item);
             taskContext.SaveChanges();
+
+            //Для того, чтобы обновить view
+            UpdateAllTasks();
         }
 
         private void UpdateAllTasks()
@@ -126,7 +146,7 @@ namespace TaskManagerLib.ViewModel
         {
             try
             {
-                Tasks = taskContext.Tasks.Where(task => task.Title.Contains(quary) || task.Description.Contains(quary)).ToList();
+                SearchResult = taskContext.Tasks.Where(task => task.Title.Contains(quary) || task.Description.Contains(quary)).ToList();
             }
             catch (Exception ex)
             {
