@@ -14,6 +14,7 @@ namespace TaskManagerLib.ViewModel
         private List<TaskItem> tasks;
         private List<TaskItem> searchResult;
         private TaskItem? currentItem;
+        private string searchQueary;
 
         public TaskViewModel(TaskContext taskContext)
         {
@@ -75,7 +76,20 @@ namespace TaskManagerLib.ViewModel
                 if (searchResult != value)
                 {
                     searchResult = value;
-                    OnPropertyChanged(this, new PropertyChangedEventArgs(nameof(Tasks)));
+                    OnPropertyChanged(this, new PropertyChangedEventArgs(nameof(SearchResult)));
+                }
+            }
+        }
+
+        public string SearchQuary
+        {
+            get { return searchQueary; }
+            set
+            {
+                if(searchQueary != value)
+                {
+                    searchQueary = value;
+                    OnPropertyChanged(this, new PropertyChangedEventArgs(nameof(SearchQuary)));
                 }
             }
         }
