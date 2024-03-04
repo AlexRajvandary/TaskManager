@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager", "TaskManager\TaskManager.csproj", "{BC16E480-9BEC-4ACE-878F-46EB68C2722D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagerLib", "TaskManagerLib\TaskManagerLib.csproj", "{942CC41E-65DA-4724-81C8-2B19089FFD51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagerLib", "TaskManagerLib\TaskManagerLib.csproj", "{942CC41E-65DA-4724-81C8-2B19089FFD51}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagerWPF", "TaskManagerWPF\TaskManagerWPF.csproj", "{863F63F2-0175-4D5B-8F59-57023633BCDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagerWPF", "TaskManagerWPF\TaskManagerWPF.csproj", "{863F63F2-0175-4D5B-8F59-57023633BCDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BC16E480-9BEC-4ACE-878F-46EB68C2722D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BC16E480-9BEC-4ACE-878F-46EB68C2722D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BC16E480-9BEC-4ACE-878F-46EB68C2722D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BC16E480-9BEC-4ACE-878F-46EB68C2722D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{942CC41E-65DA-4724-81C8-2B19089FFD51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{942CC41E-65DA-4724-81C8-2B19089FFD51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{942CC41E-65DA-4724-81C8-2B19089FFD51}.Release|Any CPU.ActiveCfg = Release|Any CPU
